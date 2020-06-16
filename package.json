@@ -30,12 +30,13 @@
     "dotenv": "^8.2.0",
     "download": "^8.0.0",
     "jimp": "^0.13.0",
-    "variance": "0.0.1",
+    "outliers": "0.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1",
-    "tamia": "^5.8.2"
+    "tamia": "^5.8.2",
+    "variance": "0.0.1"
   },
   "devDependencies": {
     "@types/react": "^16.9.36",

@@ -2,6 +2,7 @@
 const luminance = require('color-luminance').rec709;
 const variance = require('variance');
 const average = require('average');
+const outliers = require('outliers');
 
 function pixelsToLuminances(pixels) {
 	const luminances = [];
@@ -20,12 +21,22 @@ function getHorizontalVariance(luminances) {
 	return average(rowVariances);
 }
 
+/**
+ * Average horizontal variance of luninances of given images
+ */
 function getHorizontalVarianceForImages(images) {
-	return Math.round(
-		average(
-			images.map((image) => getHorizontalVariance(pixelsToLuminances(image)))
-		)
+	const values = images.map((image) =>
+		getHorizontalVariance(pixelsToLuminances(image))
 	);
+
+	// Sometimes images returned by the Windy API aren't complete, and give
+	// very low variance value: removing them from the average calculation
+	const cleanValues = values.filter(outliers());
+
+	console.log('🦀', values);
+	console.log('🍕', cleanValues);
+
+	return Math.round(average(cleanValues));
 }
 
 module.exports = {
