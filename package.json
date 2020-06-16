@@ -1,0 +1,76 @@
+{
+  "name": "fog",
+  "version": "1.0.0",
+  "description": "",
+  "author": {
+    "name": "Artem Sapegin",
+    "url": "https://sapegin.me"
+  },
+  "homepage": "https://github.com/sapegin/fog",
+  "repository": "sapegin/fog",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "pretest": "npm run lint",
+    "test": "npm run typecheck",
+    "posttest": "npm run format",
+    "typecheck": "tsc",
+    "build": "gatsby build",
+    "lint": "eslint . --ext .js,.ts,.tsx --cache --fix",
+    "format": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,md}\""
+  },
+  "keywords": [],
+  "dependencies": {
+    "average": "^0.1.0",
+    "bent": "^7.3.4",
+    "color-luminance": "^2.1.0",
+    "dotenv": "^8.2.0",
+    "download": "^8.0.0",
+    "jimp": "^0.13.0",
+    "variance": "0.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.1",
+    "tamia": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.36",
+    "@types/react-helmet": "^6.0.0",
+    "@types/styled-components": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-tamia": "^7.2.4",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-react": "^7.20.0",
+    "gatsby": "^2.23.3",
+    "gatsby-plugin-netlify": "^2.3.5",
+    "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-styled-components": "^3.3.4",
+    "gatsby-plugin-typescript": "^2.4.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "browserslist": [
+    ">1%",
+    "last 1 version",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,md}": "prettier --write"
+  }
+}
