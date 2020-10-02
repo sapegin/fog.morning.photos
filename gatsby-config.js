@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 module.exports = {
 	siteMetadata: {
 		title: 'Is it foggy in Berlin?',

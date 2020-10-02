@@ -33,8 +33,8 @@ function getHorizontalVarianceForImages(images) {
 	// very low variance value: removing them from the average calculation
 	const cleanValues = values.filter(outliers());
 
-	console.log('🦀', values);
-	console.log('🍕', cleanValues);
+	console.log('[debug] Variance values', values);
+	console.log('[debug] Variance cleaned values', cleanValues);
 
 	return Math.round(average(cleanValues));
 }

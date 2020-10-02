@@ -8,6 +8,8 @@ Thumbs.db
 *.log
 .eslintcache
 .env
-samples/
-public/
 .cache/
+/samples/
+/public/
+/src/api/public/*.json
+/static/fog.json

@@ -38,7 +38,7 @@ function getWindyUrl(params, options = {}) {
 		url.searchParams.append(key, value)
 	);
 
-	console.log('🦆', url.href);
+	console.log('[debug] Windy URL', url.href);
 
 	return url.href;
 }

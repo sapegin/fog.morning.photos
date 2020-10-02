@@ -1,0 +1,3 @@
+*.json
+  Access-Control-Allow-Origin: https://fog.morning.photos/
+  Access-Control-Expose-Headers: Content-Length

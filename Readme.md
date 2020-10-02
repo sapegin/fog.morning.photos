@@ -11,6 +11,7 @@ git clone https://github.com/sapegin/fog.morning.photos.git
 cd fog.morning.photos
 npm install
 npm run build
+npm run build-api
 ```
 
 Then run dev server (it will refresh the page after any changes in JS, styles or content):
@@ -23,11 +24,10 @@ npm start
 
 The app requires following environment variables:
 
-* `WINDY_KEY` — [Windy Webcams API](https://api.windy.com/webcams) key
-* `FOG_LAT` — location latitude
-* `FOG_LNG` — location longtitude
-* `FOG_EXCLUDE` — webcam IDs to exclude, comma separated
-
+- `WINDY_KEY` — [Windy Webcams API](https://api.windy.com/webcams) key
+- `FOG_LAT` — location latitude
+- `FOG_LNG` — location longtitude
+- `FOG_EXCLUDE` — webcam IDs to exclude, comma separated
 
 ## Author
 
