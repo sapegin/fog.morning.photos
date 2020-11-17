@@ -8,10 +8,7 @@ type FogInfo = {
 	fogLevel: number;
 };
 
-const getEndpoint = () =>
-	location.hostname === 'localhost'
-		? '/fog.json'
-		: 'https://fog-api.morning.photos/fog.json';
+const getEndpoint = () => '/api/fog.json';
 
 export function Main() {
 	const { isLoading, error, data } = useQuery<FogInfo, Error>('fog', () =>
